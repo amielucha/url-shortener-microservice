@@ -1,0 +1,22 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amielucha/url-shortener-microservice.git"
+  },
+  "author": "amielucha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amielucha/url-shortener-microservice/issues"
+  },
+  "homepage": "https://github.com/amielucha/url-shortener-microservice#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

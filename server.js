@@ -4,19 +4,11 @@ const validUrl = require('valid-url')
 const app = express()
 const dbName = 'mongodb://localhost:27017/' + 'shortee'
 
-
-// Connect to the db
-/*mongo.connect(dbName, function(err, db) {
-  if(err) throw err
-  
-  console.log("Connected to a database")
-});*/
-
-
+/**
+ * Routing
+ */
 app.get('/new/*', (req, res) => {
   const url = req.params[0]
-  
-  //console.log('URL: ', url)
   
   const result = ( validUrl.isHttpUri(url) ) ? {
     fullUrl: url,
@@ -79,7 +71,6 @@ const processDb = (hash, urlLong) => {
       db.close()
       return 1
     } else {
-
       collection.insert({ shortUrl: hash, longUrl: urlLong })
       db.close()
       return 0
